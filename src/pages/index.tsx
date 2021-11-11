@@ -1,10 +1,10 @@
-import Head from "next/head";
+import Head from 'next/head';
 
 type HomeProps = {
     title: string;
 };
 
-export default function Home({ title = "React Avançado" }: HomeProps) {
+export default function Home({ title = 'React Avançado' }: HomeProps) {
     return (
         <div>
             <Head>
