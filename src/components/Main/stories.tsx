@@ -1,16 +1,22 @@
+// Button.stories.ts|tsx
+
+import React from 'react';
+
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { withKnobs, text } from '@storybook/addon-knobs';
 import Main from '.';
 
 export default {
   title: 'Main',
   component: Main,
-  decorators: [withKnobs],
 } as ComponentMeta<typeof Main>;
 
-export const BasicMain: ComponentStory<typeof Main> = () => (
-  <Main
-    title={text('title', 'React avançado')}
-    description={text('description', 'Typescript, ReactJS, NextJS e Styled Components')}
-  />
-);
+const defaultArgs = {
+  title: 'React avançado',
+  description: 'Typescript, ReactJS, NextJS e Styled Components',
+};
+
+const Template: ComponentStory<typeof Main> = args => <Main {...args} />;
+
+export const BasicMain = Template.bind({});
+
+BasicMain.args = defaultArgs;
