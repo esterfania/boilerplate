@@ -1,5 +1,5 @@
 import Main from 'components/Main';
 
-const Teste = () => <Main />;
+const TesteCi = () => <Main />;
 
-export default Teste;
+export default TesteCi;
