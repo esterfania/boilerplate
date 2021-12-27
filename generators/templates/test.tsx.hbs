@@ -1,0 +1,22 @@
+import { render, screen } from '@testing-library/react';
+
+import {{pascalCase name}} from '.';
+
+describe('{{pascalCase name}}', () => {
+  it('should render the heading', () => {
+    const { container } = render(<{{pascalCase name}}></{{pascalCase name}}>);
+
+    expect(
+      screen.getByRole('heading', {
+        name: /react avançado/i,
+      }),
+    ).toBeInTheDocument();
+
+    expect(container.firstElementChild).toMatchSnapshot();
+  });
+
+  it('should render the colors correctly', () => {
+    const { container } = render(<{{pascalCase name}} />);
+    expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' });
+  });
+});
