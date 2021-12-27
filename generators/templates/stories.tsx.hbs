@@ -1,0 +1,30 @@
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import {{pascalCase name}} from '.';
+
+export default {
+  title: 'Template',
+  component: {{pascalCase name}},
+  args: {
+    title: 'React avançado',
+    description: 'Typescript, ReactJS, NextJS e Styled Components',
+  },
+  argTypes: {
+    title: {
+      name: 'Título',
+      type: { name: 'string', required: true },
+    },
+    control: {
+      type: 'text',
+    },
+  },
+} as ComponentMeta<typeof {{pascalCase name}}>;
+
+const Template: ComponentStory<typeof {{pascalCase name}}> = args => <{{pascalCase name}} {...args} />;
+
+export const Basic{{pascalCase name}} = Template.bind({});
+
+export const Default{{pascalCase name}} = Template.bind({});
+Default{{pascalCase name}}.args = {
+  title: 'Blabla',
+  description: 'Blablabla',
+};
